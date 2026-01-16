@@ -16,8 +16,9 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 ```
 
 *Скриншот состояния сервисов Prometheus (Endpoints):*
+<img width="1848" height="335" alt="Service" src="https://github.com/user-attachments/assets/6c06de05-63ab-48d2-90bb-0f4b7de3b36a" />
 
-![Prometheus](0.png)
+
 
 ---
 
