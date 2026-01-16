@@ -27,7 +27,8 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 Далее был применён манифест `deployment.yaml`, который описывает деплой мониторинговых компонентов.
 
 *Фрагмент кода deployment.yaml:*  
-![Deployment](2.png)
+<img width="352" height="646" alt="Yaml_code" src="https://github.com/user-attachments/assets/fe640997-ee30-4cf8-a3dd-9a660d5be54c" />
+
 
 ---
 
@@ -38,7 +39,8 @@ helm install prometheus prometheus-community/kube-prometheus-stack -n monitoring
 ```bash
 kubectl get pods -n monitoring
 ```
-![Приложение](minik.png)
+<img width="571" height="231" alt="Minik" src="https://github.com/user-attachments/assets/8002ba58-37cf-40e2-8576-a7169cdb8f14" />
+
 
 ---
 
@@ -51,7 +53,8 @@ kubectl get pods -n monitoring
 ```
 
 *График загрузки CPU:*  
-![CPU usage](C.png)
+<img width="821" height="250" alt="CPU usage" src="https://github.com/user-attachments/assets/da50377a-def6-4085-97d0-1200587776fc" />
+
 
 ---
 
@@ -64,7 +67,8 @@ kubectl get pods -n monitoring
 ```
 
 *График использования памяти:*  
-![Memory usage](M.png)
+<img width="830" height="274" alt="Memory usage" src="https://github.com/user-attachments/assets/a285030a-5285-409e-85fe-f640db5da2db" />
+
 
 ---
 
@@ -77,7 +81,8 @@ kubectl get pods -n monitoring
 ```
 
 *График использования диска:*  
-![Disk usage](D.png)
+<img width="832" height="262" alt="Disk usage" src="https://github.com/user-attachments/assets/5451de32-c2a2-4bbd-abbb-8b49eed02740" />
+
 
 ---
 
@@ -86,7 +91,8 @@ kubectl get pods -n monitoring
 В Grafana были настроены алерты на превышение порогов нагрузки — например, при загрузке CPU выше 80%.
 
 *Пример созданного алерта:*  
-![Alert](Alert.png)
+<img width="1370" height="801" alt="Monitoring" src="https://github.com/user-attachments/assets/c03e6397-55d4-4f9a-a88e-3dad2738e721" />
+
 
 ---
 
@@ -97,24 +103,14 @@ kubectl get pods -n monitoring
 ./jenkins-build.sh
 ```
 
-
 ## Результат
-
 В результате была настроена система мониторинга, позволяющая:
 
-- Отслеживать использование ресурсов кластера Kubernetes;  
-- Просматривать метрики CPU, RAM и диска в реальном времени;  
+- Отслеживать использование ресурсов кластера Kubernetes;
+- Просматривать метрики CPU, RAM и диска в реальном времени;
 - Настраивать уведомления (Alerts) о превышении порогов нагрузки.
 
----
-
-## Используемые технологии
-
-| Компонент | Назначение |
-|------------|------------|
-| **Minikube** | Локальный кластер Kubernetes |
-| **Prometheus** | Сбор метрик |
-| **Grafana** | Визуализация данных |
-| **Helm** | Установка чартов Prometheus stack |
 
 ---
+
+
